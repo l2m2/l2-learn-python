@@ -32,7 +32,7 @@ def send_mail(host, port, user, password, from_, to, cc, bcc, subject, content, 
     part.add_header('Content-Disposition', 'attachment', filename=('gbk', '', os.path.basename(a)))
     message.attach(part)
   smtp.sendmail(
-    user,
+    from_,
     to + cc + bcc,
     message.as_string()
   )
