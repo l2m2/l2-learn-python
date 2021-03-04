@@ -4,7 +4,6 @@ from sqlalchemy.sql.expression import func
 from models import Base, User
 
 engine = create_engine('postgresql://postgres:postgres@localhost/sqlalchemy-demo', echo=True)
-# Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
